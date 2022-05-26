@@ -65,7 +65,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
-          run: |
+          script: |
             # Выполняет pull образа с DockerHub
             sudo docker pull {{ secrets.DOCKER_USERNAME }}/workflow:latest
             #остановка всех контейнеров
